@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<title>Розклад</title>
+</head>
+<body>
+<div class="top">
+
+	<img alt="картинка"  class="loc" src="images/Kak-polzovatsya-YAndeks.Kartami.png">
+	<div class="header">
+		<a href="qq.html"><h2>Головна</h2></a>
+		<a href="cor.html"><h2>Курси</h2></a>
+		<a href="teory.html"><h2>Теорія</h2></a>
+		<a href="teach.html"><h2>Викладачі</h2></a>
+		<a href="cont.html"><h2>Контакти</h2></a>
+	</div>
+	<button class="but" onclick="show('block')">Зареєструватися</button>
+</div>
+<div class="dt">
+	<div class="data">
+		<img alt="картинка"  class="time" src="images/kisspng-clock-computer-icons-symbol-timer-uhr-icon-5b4ac6c94f4ce6.9079165715316272093248-removebg-preview.png">
+		<p class="txt">30-240хв.</p>
+	</div>
+	<div class="g">
+		<img alt="картинка"  class="kal" src="images/kisspng-computer-icons-calendar-symbol-logo-5af4ed3c931d88.3453036915260009566026-removebg-preview.png">
+		<p class="text">25.05-02.07</p>
+	</div>
+</div>
+<div class="month">
+	<div class="f">
+		<div onclick="Switch(this)" class="s">
+			<div class="day">May</div>
+			<div class="number">25</div>
+		</div>
+		<div onclick="Switch(this)" class="s">
+			<div class="day">May</div>
+			<div class="number">28</div>
+		</div>
+		<div onclick="Switch(this)" class="s">
+			<div class="day">May</div>
+			<div class="number">30</div>
+		</div>
+		<div onclick="Switch(this)" class="s">
+			<div class="day">June</div>
+			<div class="number">02</div>
+		</div>
+	
+
+	</div>
+	<div class="f">
+		<div onclick="Switch(this)" class="s">
+			<div class="day">June</div>
+			<div class="number">05</div>
+		</div>
+		<div onclick="Switch(this)" class="s">
+			<div class="day">June</div>
+			<div class="number">12</div>
+		</div>
+		<div onclick="Switch(this)" class="s">
+			<div class="day">June</div>
+			<div class="number">19</div>
+		</div>
+		<div onclick="Switch(this)" class="s">
+			<div class="day">June</div>
+			<div class="number">24</div>
+		</div>
+
+	
+	</div>
+		<div class="f">
+		<div onclick="Switch(this)" class="s">
+			<div class="day">June</div>
+			<div class="number">27</div>
+		</div>
+		<div onclick="Switch(this)" class="s">
+			<div class="day">June</div>
+			<div class="number">30</div>
+		</div>
+		<div onclick="Switch(this)" class="s">
+			<div class="day">July</div>
+			<div class="number">01</div>
+		</div>
+		<div onclick="Switch(this)" class="s">
+			<div class="day">July</div>
+			<div class="number">02</div>
+		</div>
+
+	
+	</div>
+
+
+</div>
+<div id="gray"></div>
+<div id="window">
+	<img class="close" src="images/close.png" onclick="show('none')" alt="картинка" >
+	<div class="form">
+	<h3>Реєстрація</h3>
+    <form action="table.html" name="f1">
+        <input type="text" placeholder="Ім'я" name="name1" class="input">
+        <input type="text" placeholder="Прізвище" name="name2" class="input">
+        <input type="email" placeholder="Email" name="email1" class="input">
+        <input type="email" placeholder="Підтвердіть Email" name="email2" class="input">
+        <input type="password" placeholder="Пароль" name="pass1" class="input">
+        <input type="password" placeholder="Підтвердіть пароль" name="pass2" class="input">
+        <input type='tel' placeholder="Телефон" name="tel" class="input">
+        <input type="radio" name="radio1"> Чоловік <input type="radio" name="radio1" class="radio"> Жінка
+        <input type="submit" value="Реєстрація" name="sab" class="input"> Натискаючи «Реєстрація», ви підтверджуєте, що прочитали і згодні з нашими Умовами Користування і Політикою Конфіденційності.
+
+    </form>
+</div>
+</div>
+
+<script>
+
+	function show(state)
+	{
+	document.getElementById('window').style.display = state;	
+	document.getElementById('gray').style.display = state; 		
+	}
+	function Switch(obj) {
+            
+              obj.style.backgroundColor = "#d4f035";
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/dd.css">
+	<title>Teory</title>
+</head>
+<body>
+<div class="teory">
+
+	<img class="loc" src="images/Kak-polzovatsya-YAndeks.Kartami.png">
+	<div class="header">
+		<a class="p" href="qq.html"><h2>Home</h2></a>
+		<a class="p" href="cor.html"><h2>Courses</h2></a>
+		<a class="p" href="table.html"><h2>Schedule</h2></a>
+		<a class="p" href="teach.html"><h2>Teachers</h2></a>
+		<a class="p" href="cont.html"><h2>Contacs</h2></a>
+	</div>
+	<button class="but" onclick="show('block')">Registration</button>
+</div>
+	<img class="b2" src="images/0729665302b12ccb4a8f75facb0cff1d-removebg-preview.png">
+<div id="all">
+	<div class="headof">
+		<p class="m">Artificial neural structures (ARNs) are a program for implementing the neural structures of our brain. We will not discuss our knowledge, study the brain, put neurons, which are a kind of organic switches.</p>
+		<p class="l">
+Artificial intelligence (AI) is a branch of computational linguistics and computer science that deals with the formalization of problems and tasks that are similar to human actions.</p>
+	</div>
+
+</div>
+<div class="grey"></div>
+<div class="teory">
+	<div class="first">
+		<p>Artificial neural networks mimic the behavior of the brain in a simpler form. They can be taught in controlled and uncontrolled ways. In a controlled ANN, the network is trained by transmitting relevant input information and examples of output information. For example, a spam filter in an e-mail box: the input information can be a list of words that are usually contained in spam messages, and the output information can be a classification for the message (spam or not spam).</p>
+		<p>The biological neuron is simulated in the ANN through the activation function. In classification tasks (such as spam detection), the activation function must have a "switch" characteristic. In other words, if the input is greater than some value, the output must change state, for example from 0 to 1 or -1 to 1. This mimics the "inclusion" of a biological neuron. The sigmoid function is usually used as an activation function.</p>
+	</div>
+	<img class="bb" src="images/1_PdFx1PHrdGEVA8m0FFVIzA@2x.jpeg">
+</div>
+<div class="grey1"></div>
+<div id="teory1">
+	<img class="bb" src="images/unnamed.jpg">
+	<div class="first">
+		<p class="s">From the graph you can see that the function is "activation" - it grows from 0 to 1 with each increase in the value of x. Sigmoid function is smooth and continuous. This means that the function has a derivative, which in turn is a very important factor for learning the algorithm.
+		</p>
+
+
+		<p class="s">As mentioned earlier, biological neurons are hierarchically connected in networks where the output of some neurons is the input for other neurons. We can represent such networks in the form of connected layers with nodes. Each node receives a weighted input, activates an activation function for the sum of inputs, and generates an output.</p>
+	</div>
+</div>
+<div class="grey2"></div>
+<div class="teory">
+	<div class="first">
+		<p> In the figure above, you can see three layers of the network - Layer 1 is the input layer, where the network receives external input. Layer 2 is called the hidden layer, this layer is not part of either the input or output. Note: Neural networks can have several hidden layers, in this example only one layer was included for simplicity. Finally, Layer 3 is the source layer. You may notice that there are many connections between Layer 1 (W1) and Layer 2 (W2). Each node in W1 has a connection with all nodes in W2, and from each node in W2 there is one connection to a single output node in W3. Each of these connections must have a corresponding weight. </p>
+		<p>
+All the mathematics above requires very precise notation. The notation used here is also used in the in-depth study guide from Stanford University. In the following equations, the weight of the corresponding bond will be denoted as wij (l), where i is the node number in layer l + 1, and j is the node number in layer l. For example, the weight of the bond between node 1 in layer 1 and node 2 in layer 2 will be denoted as w21 (1). I wonder why the indices 2-1 mean the relationship 1-2? This notation is clearer if you add an offset.
+
+		The graph above shows that the +1 offset is associated with all nodes in the adjacent layer. The offset in W1 is related to all nodes in W2. Since the offset is not a real node with an activation function, it has no inputs (its input value is always equal to a constant). The weight of the connection between the offset and the node will be denoted by bi (l), where i is the node number in the layer l + 1, as well as in wij (l). For example from w21 (1), the weight between the offset in W1 and the second node in W2 will be denoted by b2 (1).
+
+		
+Remember that these values ​​- wij (l) and bi (l) - will change during the learning process.
+
+The designation of the connection to the source node will look like this: hj (l), where j is the node number in layer l. Then in the previous example, the link to the source node is h1 (2) </p>
+	</div>
+	<img class="bb1" src="images/Node-diagram.jpg">
+</div>
+<div class="grey2"></div>
+<div class="teory">
+	<img class="bb2" src="images/neurons-electrical-pulses-picture-id941148498_d_850.jpg">
+	<div class="first">
+		<p>There are several types of neural communication. The most commonly used are synapsoidal and ReLU. In the first case, the neural network uses data in the range from -1 to 1 (which actually corresponds to -100% to 100%). In the second, the input data is transmitted through the values ​​0 and inf (information of any nature). The number of calculations is set by setting the number of layers. Modern neural networks have dozens and sometimes even hundreds of layers of computing. Programming books contain examples of code in Java, which indicates the development of technology not only in the field of desktop applications, but also for mobile platforms.This indicates the efficiency of neural networks. As is clear from the previous section, the input data for the neural network should be reduced to the established form. What it means? Consider the following example: analyze the dynamics of the stock market.
+
+Prices in this case will be much higher than one. Therefore, you can reduce the data to the price difference, which will be expressed as a percentage. At the output we get a range of values ​​from -1 to 1.
+
+The described sequence of actions is called normalization of input data. This is the first and main step before starting machine learning. The system must receive the information in the form that it can process.</p>
+
+	</div>
+
+</div>
+<div class="grey2"></div>
+  <section>
+
+<div id="titles">
+<div id="titlecontent">
+The next step is to obtain the first result of the calculations. In 99% of cases, it will be different from what it really should be. This fact is explained simply: the network does not have enough information for proper analysis (ie relevant weight distribution).
+
+At this stage, a learning algorithm is created - a training set. It is a set of operands that specify input processing parameters and help the neural network to estimate weight correctly. Depending on the complexity of the problem, from 4 to several hundred formulas can be used.
+The passage of the operand cycle will be called the epoch. At the time of creation, the neural network has an epoch numbered 0. After the first cycle of learning comes epoch 1, and so on. With each training cycle, the calculation error decreases. When this figure does not exceed a few percent, it is considered that the network has been trained and is suitable for solving real problems.
+
+It should also be noted that neural networks and artificial intelligence are similar but different terms. Neural networks have a modular system, where calculations are performed based on established rules. The system learns to analyze only specific data and is suitable for solving one clearly defined problem.
+
+A well-developed and trained neural network can easily replace a staff analyst, but only within one data range. Artificial intelligence, to put it simply, is the ability of a computer to create and train neural networks on its own. Any neural network accepts numerical inputs.
+values ​​and also outputs numeric values. Transferable
+the function for each network element is usually selected
+163
+
+so that its input argument can take arbitrary
+values, and the original values ​​would be strictly limited
+range. At any input values ​​there is an effect
+saturation, when the element is sensitive only to the input values, which
+lie in a limited area (for example, S - functions). In this
+case, the original value will always be in the range (0,1),
+and the sensitivity area for inputs is slightly wider than the interval (-
+1, + 1). This function is smooth, and its derivative is easily calculated
+- this fact is important for the operation of the network learning algorithm
+(This is also the reason that the limit function for
+this purpose is practically not used). Non-numerical data of other types can be either converted into
+
+numerical form, or declare insignificant. The value of dates and
+time, if needed, can be converted to numeric,
+subtracting from them the starting date (time). The value of money
+to turn is quite simple. With arbitrary text
+fields (for example, surnames of people) it is impossible to work and
+they need to be made insignificant. In many real
+tasks have to deal with not quite reliable
+data. The values ​​of some variables may be corrupted by noise
+or be partially absent. 
+There are special tools
+with missing values ​​(they can be replaced by
+the average value of this variable or its other statistics), so
+if data is scarce, cases with
+missing values. Neural networks are mostly stable
+to noise. However, this stability has a limit. For example, hotels
+that is, values ​​that lie very far from the area
+normal values ​​of the variable can distort the result
+teaching. In such cases, it is best to try to find these
+emissions (remove relevant examples or convert emissions
+</div>
+</div>
+
+ </section>
+ <div id="alldown">
+	<div class="bottom">
+		<div class="bottomcol">
+			<p class="txtonbottom2">About</p>
+			<div class="colors"></div>
+			<p class="txtonsecond">NeiroSchool - ukrainian brand for proggramers</p>
+			<div class="phot">
+				<img class="images1" src="images/images-removebg-preview.png">
+				<img class="images1" src="images/images-removebg-preview.png">
+				<img class="images1" src="images/images-removebg-preview.png">
+			</div>
+		</div>
+		<div class="bottomcol">
+			<p class="txtonbottom">World of Neiroschool</p>
+			<div class="colors1"></div>
+			<p class="txtonsecond">About NeiroSchool</p>
+			<p class="txtonsecond">
+Cooperation</p>
+		</div>
+		<div class="bottomcol">
+			<p class="txtonbottom">Іnformation</p>
+			<div class="colors2"></div>
+			<p class="txtonsecond">Join</p>
+			<p class="txtonsecond">Contacs</p>
+		</div>
+		<div class="bottomcol">
+			<p class="txtonbottom1">Contacs</p>
+			<div class="colors3"></div>
+			<p class="txtonsecond">Num:+380 935155411</p>
+			<p class="txtonsecond">Email:neiro.link@gmail.com</p>
+		</div>
+		
+	</div>
+	<div class="grey1"></div>
+	<div class="fotter">
+		<p class="txtonsecond">Thanks!</p>
+		<p class="txtonsecond">©All rights are reserved</p>
+		<a href="teory.html" class="txtonsecond1">Ukr</a>
+</div>
+</div>
+
+<div id="gray"></div>
+<div id="window">
+	<img class="close" src="images/close.png" onclick="show('none')" alt="">
+	<div class="form">
+	<h3>Реєстрація</h3>
+    <form action="teory1.html" name="f1">
+        <input type="text" placeholder="Ім'я" name="name1" class="input">
+        <input type="text" placeholder="Прізвище" name="name2" class="input">
+        <input type="email" placeholder="Email" name="email1" class="input">
+        <input type="email" placeholder="Підтвердіть Email" name="email2" class="input">
+        <input type="password" placeholder="Пароль" name="pass1" class="input">
+        <input type="password" placeholder="Підтвердіть пароль" name="pass2" class="input">
+        <input type='tel' placeholder="Телефон" name="tel" class="input">
+        <input type="radio" name="radio1"> Чоловік <input type="radio" name="radio1" class="radio"> Жінка
+        <input type="submit" value="Реєстрація" name="sab" class="input"> Натискаючи «Реєстрація», ви підтверджуєте, що прочитали і згодні з нашими Умовами Користування і Політикою Конфіденційності.
+
+    </form>
+</div>
+</div>
+<script type="text/javascript">
+
+
+	function show(state)
+	{
+	document.getElementById('window').style.display = state;	
+	document.getElementById('gray').style.display = state; 		
+	}	
+</script>
+</body>
+</html>

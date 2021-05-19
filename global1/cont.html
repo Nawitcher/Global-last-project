@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style4.css">
+	<title>Контакти</title>
+</head>
+<body>
+<div class="top">
+
+	<img alt="картинка"  class="loc" src="images/Kak-polzovatsya-YAndeks.Kartami.png">
+	<div class="header">
+		<a href="qq.html"><h2>Головна</h2></a>
+		<a href="cor.html"><h2>Курси</h2></a>
+		<a href="teory.html"><h2>Теорія</h2></a>
+		<a href="teach.html"><h2>Викладачі</h2></a>
+		<a href="table.html"><h2>Розклад</h2></a>
+	</div>
+	<button class="but" onclick="show('block')">Зареєструватися</button>
+</div>
+<div class="topper">
+	<p class="cont">Contact Us</p>
+	<p class="c">Get in touch with us to get the ball rolling</p>
+</div>
+<div class="contacs">
+	<div class="col">
+		<img class="images" src="images/png-clipart-telephone-iphone-computer-icons-phone-icon-electronics-telephone-call-removebg-preview.png">
+		<p class="txt">+380 935155411</p>
+	</div>
+	<div class="col">
+		<img alt="картинка"  class="images2" src="images/png-transparent-computer-icons-newsletter-email-business-phone-icon-angle-company-rectangle-removebg-preview.png">
+		<p class="txt">neiro.link@gmail.com</p>
+	</div>
+	<div class="col">
+		<img alt="картинка"  class="images1" src="images/images-removebg-preview.png">
+		<p class="txt">@NeiroSchool</p>
+	</div>
+</div>
+<p class="gg1">©All rights are reserved</p>
+<div id="gray"></div>
+<div id="window">
+	<img alt="картинка"  class="close" src="images/close.png" onclick="show('none')" alt="">
+	<div class="form">
+	<h3>Реєстрація</h3>
+    <form action="cont.html" name="f1">
+        <input type="text" placeholder="Ім'я" name="name1" class="input">
+        <input type="text" placeholder="Прізвище" name="name2" class="input">
+        <input type="email" placeholder="Email" name="email1" class="input">
+        <input type="email" placeholder="Підтвердіть Email" name="email2" class="input">
+        <input type="password" placeholder="Пароль" name="pass1" class="input">
+        <input type="password" placeholder="Підтвердіть пароль" name="pass2" class="input">
+        <input type='tel' placeholder="Телефон" name="tel" class="input">
+        <input type="radio" name="radio1"> Чоловік <input type="radio" name="radio1" class="radio"> Жінка
+        <input type="submit" value="Реєстрація" name="sab" class="input"> Натискаючи «Реєстрація», ви підтверджуєте, що прочитали і згодні з нашими Умовами Користування і Політикою Конфіденційності.
+
+    </form>
+</div>
+</div>
+<script>
+
+
+	function show(state)
+	{
+	document.getElementById('window').style.display = state;	
+	document.getElementById('gray').style.display = state; 		
+	}	
+</script>
+</body>
+</html>

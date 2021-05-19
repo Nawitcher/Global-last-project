@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Головна</title>
+	<meta charset="utf-8">
+
+	<script src="https://cdn.rawgit.com/BrainJS/brain.js/45ce6ffc/browser.js"></script>
+</head>
+<body>
+
+<div class="top">
+
+	<img alt="картинка" class="loc" src="images/Kak-polzovatsya-YAndeks.Kartami.png">
+	<div class="header">
+		<a href="teory.html"><h2>Теорія</h2></a>
+		<a href="cor.html"><h2>Курси</h2></a>
+		<a href="table.html"><h2>Розклад</h2></a>
+		<a href="teach.html"><h2>Викладачі</h2></a>
+		<a href="cont.html"><h2>Контакти</h2></a>
+	</div>
+	<button class="but"  onclick="show('block')">Зареєструватися</button>
+</div>
+<div class="photos">
+	<img alt="картинка"  class="back2" src="images/iStock-1034901762_d_850.jpg">
+	<div class="main">
+		<h2 class="txt">Курси по вивченю штучного інтелекту на прикладі нейронних мереж</h2>
+		<div class="txton"><h2 class="txton">До початку</h2></div>
+	</div>
+	<img alt="картинка"  class="back" src="images/brain_electronic-removebg-preview.png">
+    
+</div>
+<div id="gray"></div>
+<div id="window">
+	<img alt="картинка" class="close" src="images/close.png" onclick="show('none')">
+	<div class="form">
+	<h3>Реєстрація</h3>
+    <form action="qq.html" name="f1">
+        <input type="text" placeholder="Ім'я" name="name1" class="input">
+        <input type="text" placeholder="Прізвище" name="name2" class="input">
+        <input type="email" placeholder="Email" name="email1" class="input">
+        <input type="email" placeholder="Підтвердіть Email" name="email2" class="input">
+        <input type="password" placeholder="Пароль" name="pass1" class="input">
+        <input type="password" placeholder="Підтвердіть пароль" name="pass2" class="input">
+        <input type='tel' placeholder="Телефон" name="tel" class="input">
+        <input type="radio" name="radio1"> Чоловік <input type="radio" name="radio1" class="radio"> Жінка
+        <input type="submit" value="Реєстрація" name="sab" class="input"> Натискаючи «Реєстрація», ви підтверджуєте, що прочитали і згодні з нашими Умовами Користування і Політикою Конфіденційності.
+
+    </form>
+</div>
+</div>
+
+<div id="taimer">
+	<span id="d" class="badge badge-success mr-3 p-3"></span>
+	<span id="h" class="badge badge-success p-3 mr-3"></span>
+	<span id="m" class="badge badge-success mr-3 p-3"></span>
+	<span id="s" class="badge badge-success p-3"></span>
+</div>
+<div class="neir">
+	<canvas id="canv" width="70" height="70" style="border: 2px solid white;display: block;"></canvas>
+	<button onclick ="Do()" id = "b1">Розпізнати</button>
+
+	<button onclick="Clear()" id="b2">Очистити</button>
+	<div id="jj"></div>
+
+</div>
+<script>
+		function show(state)
+	{
+	document.getElementById('window').style.display = state;	
+	document.getElementById('gray').style.display = state; 		
+	}	
+	let date = new Date('June 01 2021 00:00:00');
+	function c () {
+		let now = new Date();
+		gap = date - now;
+
+		let days  = Math.floor(gap / 1000 / 60 / 60 / 24);
+		let hours  = Math.floor(gap / 1000 / 60 / 60 ) % 24;
+		let minutes = Math.floor(gap / 1000 / 60 ) % 60;
+		let seconds = Math.floor(gap / 1000) % 60;
+		document.getElementById('d').innerText ="  "+ "День  "+ days + ""  ;
+		document.getElementById('h').innerText ="Години"+" "+ hours ;
+		document.getElementById('m').innerText ="Хвилин"+" "+ minutes ;
+		document.getElementById('s').innerText = "Секунд"+" "+seconds;
+
+	}
+	c();
+	let div = document.getElementById('jj');
+	let e1  = document.createElement('a');
+	let e2  = document.createElement('a');
+	let e3  = document.createElement('a');
+	let e4  = document.createElement('a');
+	let e5  = document.createElement('a');
+	e1.href = "teory.html";
+	e2.href = "cor.html";
+	e3.href = "table.html";
+
+	e4.href = "teach.html";
+
+	e5.href = "cont.html";
+	e1.style.cssText = "color:white;text-decoration:none;";
+	e2.style.cssText = "color:white;text-decoration:none;";
+	e3.style.cssText = "color:white;text-decoration:none;";
+	e4.style.cssText = "color:white;text-decoration:none;";
+	e5.style.cssText = "color:white;text-decoration:none;";
+
+
+
+	setInterval(c, 1000);
+	function DCanvas(el)
+		{
+			const ctx = el.getContext('2d');
+			const pixel = 3;
+
+			let is_mouse_down = false;
+
+			canv.width = 75;
+			canv.height = 75;
+
+			this.drawLine = function(x1, y1, x2, y2, color = 'gray') {
+				ctx.beginPath();
+				ctx.strokeStyle = color;
+				ctx.lineJoin = 'miter';
+				ctx.lineWidth = 1;
+				ctx.moveTo(x1, y1);
+				ctx.lineTo(x2, y2);
+				ctx.stroke();
+			}
+
+			this.drawCell = function(x, y, w, h) {
+				ctx.fillStyle = 'blue';
+				ctx.strokeStyle = 'blue';
+				ctx.lineJoin = 'miter';
+				ctx.lineWidth = 1;
+				ctx.rect(x, y, w, h);
+				ctx.fill();
+			}
+
+			this.clear = function() {
+				ctx.clearRect(0, 0, canv.width, canv.height);
+			}
+
+			this.drawGrid = function() {
+				const w = canv.width;
+				const h = canv.height;
+				const p = w / pixel;
+
+				const xStep = w / p;
+				const yStep = h / p;
+
+				for( let x = 0; x < w; x += xStep )
+				{
+					this.drawLine(x, 0, x, h);
+				}
+
+				for( let y = 0; y < h; y += yStep )
+				{
+					this.drawLine(0, y, w, y);
+				}
+			}
+
+			this.calculate = function(draw = false) {
+				const w = canv.width;
+				const h = canv.height;
+				const p = w / pixel;
+
+				const xStep = w / p;
+				const yStep = h / p;
+
+				const vector = [];
+				let __draw = [];
+
+				for( let x = 0; x < w; x += xStep )
+				{
+					for( let y = 0; y < h; y += yStep )
+					{
+						const data = ctx.getImageData(x, y, xStep, yStep);
+
+						let nonEmptyPixelsCount = 0;
+						for( i = 0; i < data.data.length; i += 10 )
+						{
+							const isEmpty = data.data[i] === 0;
+
+							if( !isEmpty )
+							{
+								nonEmptyPixelsCount += 1;
+							}
+						}
+
+						if( nonEmptyPixelsCount > 1 && draw )
+						{
+							__draw.push([x, y, xStep, yStep]);
+						}
+
+						vector.push(nonEmptyPixelsCount > 1 ? 1 : 0);
+					}
+				}
+
+				if( draw )
+				{
+					this.clear();
+					this.drawGrid();
+
+					for( _d in __draw )
+					{
+						this.drawCell( __draw[_d][0], __draw[_d][1], __draw[_d][2], __draw[_d][3] );
+					}
+				}
+
+				return vector;
+			}
+
+			el.addEventListener('mousedown', function(e) {
+				is_mouse_down = true;
+				ctx.beginPath();
+			})
+
+			el.addEventListener('mouseup', function(e) {
+				is_mouse_down = false;
+			})
+
+			el.addEventListener('mousemove', function(e) {
+				if( is_mouse_down )
+				{
+					ctx.fillStyle = 'red';
+					ctx.strokeStyle = 'red';
+					ctx.lineWidth = pixel;
+
+					ctx.lineTo(e.offsetX, e.offsetY);
+					ctx.stroke();
+
+					ctx.beginPath();
+					ctx.arc(e.offsetX, e.offsetY, pixel / 2, 0, Math.PI * 2);
+					ctx.fill();
+
+					ctx.beginPath();
+					ctx.moveTo(e.offsetX, e.offsetY);
+				}
+			})
+		}
+
+		let vector = [];
+		let net = null;
+		let train_data = [];
+		
+
+		const d = new DCanvas(document.getElementById('canv'));
+
+		document.addEventListener('keypress', function(e) {
+			if( e.key.toLowerCase() == 'q' ){
+				vector = d.calculate(true);
+				if( confirm('one?') ){
+					train_data.push({
+						input: vector,
+						output: {one: 1} 
+					});
+
+				}
+				 else
+				{
+					train_data.push({
+						input: vector,
+						output: {two: 1}
+					});
+				}
+
+			}
+			if( e.key.toLowerCase() == 'w' ){
+				vector = d.calculate(true);
+				if( confirm('two?') ){
+					train_data.push({
+						input: vector,
+						output: {two: 1} 
+					});
+
+				}
+				 else
+				{
+					train_data.push({
+						input: vector,
+						output: {two: 0}
+					});
+				}
+			}
+			if( e.key.toLowerCase() == 'e' ){
+				vector = d.calculate(true);
+				if( confirm('three?') ){
+					train_data.push({
+						input: vector,
+						output: {three: 1} 
+					});
+
+				}
+				 else
+				{
+					train_data.push({
+						input: vector,
+						output: {three: 0}
+					});
+				}
+			}
+			if( e.key.toLowerCase() == 'r' ){
+				vector = d.calculate(true);
+				if( confirm('four?') ){
+					train_data.push({
+						input: vector,
+						output: {four: 1} 
+					});
+
+				}
+				 else
+				{
+					train_data.push({
+						input: vector,
+						output: {four: 0}
+					});
+				}
+				
+			}
+			if( e.key.toLowerCase() == 't' ){
+				vector = d.calculate(true);
+				if( confirm('five?') ){
+					train_data.push({
+						input: vector,
+						output: {five: 1} 
+					});
+
+				}
+				 else
+				{
+					train_data.push({
+						input: vector,
+						output: {five: 0}
+					});
+				}
+				
+			}
+			
+			
+		});
+
+			function Do(){
+				/*vector = d.calculate(true);*/
+				net = new brain.NeuralNetwork();
+				net.train(train_data, {log: true});
+
+				const result = brain.likely(d.calculate(), net);
+				/*alert(result);*/
+				if (result === "one"){
+				/*document.getElementById('jj').innerText = "Теорія" ;*/
+				e1.appendChild(document.createTextNode('Теорія'));
+                div.appendChild(e1);
+			}
+			if (result === "two"){
+				e2.appendChild(document.createTextNode('Курси'));
+                div.appendChild(e2);
+			}
+			if (result === "three"){
+				e3.appendChild(document.createTextNode('Розклад'));
+                div.appendChild(e3);
+			}
+			if (result === "four"){
+				e4.appendChild(document.createTextNode('Викладачі'));
+                div.appendChild(e4);
+			}
+			if (result === "five"){
+				e5.appendChild(document.createTextNode('Контакти'));
+                div.appendChild(e5);
+			}
+			}
+			function Clear(){
+				d.clear();
+				div.removeChild(e1);
+				div.removeChild(e2);
+				div.removeChild(e3);
+				div.removeChild(e4);
+				div.removeChild(e5);
+			}			
+</script>
+</body>
+</html>

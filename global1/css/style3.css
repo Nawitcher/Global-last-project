@@ -1,0 +1,318 @@
+body{
+	background: url("nochnoy-gorod (1366x768).jpg");
+}
+h2{
+	font-family: Arial;
+	font-size: 20px;
+	color: white;
+	position: relative;
+	left: 80px;
+	
+}
+.loc {
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top:5px;
+	right: 55px;
+}
+.top{
+	/*border: 2px solid white;*/
+	position: relative;
+	/*bottom: 200px;*/
+	display: flex;
+	justify-content: space-around;
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	width: 35%;
+}
+.but{
+	position: relative;
+	right: -50px;
+	top: 10px;
+	width: 150px;
+	font-size: 15px;
+	color: white;
+	border-radius: 50px;
+	height: 40px;
+	
+background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+a{
+	text-decoration: none;
+}
+.time{
+	width: 35px;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	margin-top: 48%;
+	margin-right: 2%;
+}
+.data{
+	display: flex;
+	flex-direction: row;
+	height: 35px;
+	width: 250px;
+	position: relative;
+
+}
+.txt{
+	margin-top: 53%;
+	margin-left: 3%;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+.s{
+	width: 80px;
+	height:80px;
+	border: 1px solid black;
+	background-color: #172c33;
+	display: flex;
+	flex-direction: column;
+}
+
+.day{
+	width: 100%;
+	height: 30%;
+	text-align: center;
+	background-color: red;
+	color: white;
+	font-size: 20px;
+
+}
+.number{
+	text-align: center;
+	font-size: 44px;
+	color: #f54320;
+}
+.f{
+display: flex;
+flex-direction: row;
+}
+.month{
+	margin-top: 1%;
+	display: flex;
+	flex-direction: column;
+	position: sticky;
+}
+.kal{
+	width: 55px;
+	height: 35px;
+	position: relative;
+	top: 67%;
+	left: 60%;
+}
+.dt{
+	width: 250px;
+	display: flex;
+	justify-content: space-between;
+}
+.g{
+	width: 250px;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+.text{
+	font-size: 20px;
+	color: white;
+	position: relative;
+	top: 39%;
+	margin-left: 57%;
+
+}
+.s:hover{
+	background-color: #1da38f;
+}
+#window{
+	width: 350px;
+	height: 530px;
+	margin: 40px auto;
+	background-color: #fff;
+	border-radius: 15px;
+	border: 1px solid #fff;
+	z-index: 20;
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.form{
+	width: 275px;
+	margin: -15px auto 20px auto;
+
+}
+.input{
+	width: 260px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.radio{
+	margin-bottom: 10px;
+}
+.close{
+	margin: 10px 0 0 320px;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	padding: 2px;
+	background: #ccc;
+}
+.close:hover{
+	background: #fff;
+}
+#gray{
+	background-color: rgba(1,1,1,0.75);
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: none;
+
+}
+@media (min-width: 1800px){
+	body{
+		background-image: url("nochnoy-gorod1 (1920x1200).jpg");
+	}
+	.s{
+	width: 120px;
+	height:120px;
+	border: 1px solid black;
+	background-color: #172c33;
+	display: flex;
+	flex-direction: column;
+}
+.day{
+	width: 100%;
+	height: 30%;
+	text-align: center;
+	background-color: red;
+	color: white;
+	font-size: 30px;
+
+}
+
+.number{
+	text-align: center;
+	font-size: 58px;
+	color: #f54320;
+}
+.dt{
+	width: 420px;
+	display: flex;
+	justify-content: space-between;
+}
+.txt{
+	margin-top: 52%;
+	margin-left: 3%;
+	font-size: 31px;
+	color: white;
+	text-align: center;
+}
+.time{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	margin-top: 48%;
+	margin-right: 2%;
+}
+.kal{
+	width: 80px;
+	height: 55px;
+	position: relative;
+	top: 71%;
+}
+.text{
+	font-size: 31px;
+	color: white;
+	position: relative;
+	top: 39%;
+	margin-left: 55%;
+
+}
+
+}
+@media screen and (max-width: 1024px){
+	body{
+		background: url("nochnoy-gorod (1366x768).jpg");
+	}
+		.header{
+  display: flex;
+  flex-direction: column;
+margin-left: -45%;
+}
+.loc{
+  margin-left: -9%;
+}
+.top{
+  display: flex;
+  justify-content: space-around;
+}
+}
+@media screen and (max-width: 530px){
+		.s{
+	width: 120px;
+	height:120px;
+	border: 1px solid black;
+	background-color: #172c33;
+	display: flex;
+	flex-direction: column;
+}
+.day{
+	width: 100%;
+	height: 30%;
+	text-align: center;
+	background-color: red;
+	color: white;
+	font-size: 30px;
+
+}
+
+.number{
+	text-align: center;
+	font-size: 58px;
+	color: #f54320;
+}
+.dt{
+	width: 420px;
+	display: flex;
+	justify-content: space-between;
+}
+.txt{
+	margin-top: 44%;
+	margin-left: 3%;
+	font-size: 31px;
+	color: white;
+	text-align: center;
+}
+.time{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	margin-top: 42%;
+	margin-right: 2%;
+}
+.kal{
+	width: 80px;
+	height: 55px;
+	position: relative;
+	top: 59%;
+}
+.text{
+	font-size: 31px;
+	color: white;
+	position: relative;
+	top: 29%;
+	margin-left: 55%;
+
+}
+}
